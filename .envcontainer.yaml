@@ -1,0 +1,28 @@
+project:
+  name: Expenses
+  version: 0.0.1
+  description: Create a development environment for Expenses Pro.
+container:
+  port: 3000
+  build: |
+    FROM node:20.5
+
+    RUN apt-get update && \
+        apt-get install \
+        sudo \
+        curl \
+        wget \
+        git -y
+
+    # INSTALL PNPM
+    RUN npm install -g pnpm
+
+    # ADD USER
+    RUN useradd -ms /bin/bash erick &&  \
+        echo "erick ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+    USER erick
+
+    RUN git config --global user.email "erickmaria08@gmail.com" && \
+        git config --global user.name "Erick Maria"
+always-update: false
+auto-stop: true
