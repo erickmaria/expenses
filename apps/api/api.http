@@ -1,0 +1,18 @@
+###
+
+GET http://localhost:3000/expenses HTTP/1.1
+
+###
+
+POST http://localhost:3000/expenses HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Electricity Bill",
+    "value": 100.50,
+    "dateExpiration": "2024-04-07",
+    "installment": "1/1",
+    "description": "Monthly electricity bill payment",
+    "status": "pending",
+    "tags": ["utility", "bills"]
+}

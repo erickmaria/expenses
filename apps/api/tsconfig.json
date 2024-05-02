@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "strict": true,
+      "noImplicitOverride": false,
+      "strictPropertyInitialization": false,
+      // "experimentalDecorators": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "moduleResolution": "Node",
+      "module": "CommonJS",
+      "target": "ES2020",
+      "outDir": "dist"
+    },
+    "include": [
+      "src/**/*"
+, "test.ts"    ],
+    "exclude": [
+      "node_modules",
+      "**/*.spec.ts"
+    ]
+  }
+  
